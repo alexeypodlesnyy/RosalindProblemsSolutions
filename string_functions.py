@@ -96,20 +96,10 @@ def transcribe_dna_to_rna(text):
     return text.replace("T", "U")
 
 
-path_to_data = "C:\\Users\\Araragi\\Desktop\\rosalind.txt"
 
 
-def read_file(file_name):
-    text = ""
-    try:
-        file = open(file_name, "r")
-        for line in file:
-            text += line
-    except:
-        print("Something went wrong while reading the file")
-    finally:
-        file.close()
-    return text
+
+
 
 
 def fibonacci_rabbits(n, k):
@@ -134,6 +124,10 @@ def computing_gc_content(text):
     return cg_len / len(text)
 
 
+
+
 print(computing_gc_content("CCACCCTCGTGGTATGGCTAGGCATTCAGGAACCGGAGAACGCTTCAGACCAGCCCGGACTGGGAACCTGCGGGCAGTAGGTGGAAT"))
 
+
+# wat the fuk
 
