@@ -12,7 +12,7 @@ def translate_rna_to_prot(rna):
 
 def codon_to_protein(text):
     if len(text) != 3:
-        raise Exception("{} doesn't look like a codon".format(text))
+        raise Exception(text + " doesn't look like RNA codon")
     if text == "UUU" or text == "UUC":
         return "F"
     if text == "UUA" or text == "UUG":
@@ -41,7 +41,7 @@ def codon_to_protein(text):
         return "I"
     if text == "AUG":
         return "M"
-    if text == "ACU" or text == "ACC" or text == "ACG":
+    if text == "ACU" or text == "ACC" or text == "ACG" or text == "ACA":
         return "T"
     if text == "AAU" or text == "AAC":
         return "N"
@@ -62,7 +62,14 @@ def codon_to_protein(text):
     if text == "GGU" or text == "GGC" or text == "GGA" or text == "GGG":
         return "G"
     else:
-        return "{} - unknown codon".format(text)
+        print(text)
+        return "?"
 
-result = translate_rna_to_prot("AUGGCCAUGGCGCCCAGAACUGAGAUCAAUAGUACCCGUAUUAACGGGUGA")
-print(result)
+
+
+import utils_rosalind
+
+path_to_data = "C:\\Users\\Araragi\\Desktop\\rosalind.txt"
+
+s = utils_rosalind.read_file(path_to_data)
+print(translate_rna_to_prot(s.strip()))

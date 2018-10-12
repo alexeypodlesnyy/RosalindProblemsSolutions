@@ -34,5 +34,3 @@ def count_cg_content(text):
                 a_or_t += 1
         return c_or_g / (a_or_t + c_or_g) * 100
 
-
-print(count_cg_content("CCACCCTCGTGGTATGGCTAGGCATTCAGGAACCGGAGAACGCTTCAGACCAGCCCGGACTGGGAACCTGCGGGCAGTAGGTGGAAT"))
